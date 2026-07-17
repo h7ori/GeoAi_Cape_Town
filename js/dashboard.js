@@ -22,11 +22,11 @@ const Dashboard = (() => {
       <div class="hero-section">
         <div class="hero-badge">
           <i class="fas fa-satellite-dish"></i>
-          GeoAI Final Project — ${info.subtitle ?? ''}
+          GeoAI Final Project
         </div>
         <h1 class="hero-title">
-          <span class="gradient-text">Vegetation Change</span><br>
-          Analysis of Cape Town
+          <span class="gradient-text">Classification and Change Detection</span><br>
+          of Vegetation in the City of Cape Town
           <span style="color:var(--text-muted);font-size:0.55em;"> (2024–2025)</span>
         </h1>
         <p class="hero-description">
@@ -372,19 +372,9 @@ const Dashboard = (() => {
           </div>
         </div>
 
-        <!-- Raster Note -->
-        <div class="raster-info-panel" id="raster-info-note">
-          <i class="fas fa-info-circle"></i>
-          <div>
-            <strong style="color:var(--text-primary);">GeoTIFF Rendering Note</strong>
-            <p style="margin-top:0.25rem;">
-              The GeoTIFF files (<code>Classification_CapeTown_2024.tif</code>, <code>Classification_CapeTown_2025.tif</code>) are detected
-              and a browser-side rendering attempt is made via <strong>georaster-layer-for-leaflet</strong>.
-              For optimal performance, pre-process them as <strong>Cloud-Optimized GeoTIFFs (COG)</strong> or export XYZ tile sets
-              (e.g., using <code>gdal2tiles</code> or QGIS). The application is architecturally ready to consume COG/XYZ layers.
-            </p>
-          </div>
-        </div>
+
+        <!-- GeoTIFF Rendering Note removed -->
+
 
         <!-- Sample distribution donut -->
         <div class="card-glass" style="margin-top:1.5rem;">
@@ -999,41 +989,50 @@ const Dashboard = (() => {
           </div>
         </div>
 
-        <!-- Team / Authors -->
+        <!-- Team / Authors (Modern Responsive Table) -->
         <div class="card-glass" style="margin-bottom:1.5rem;">
           <div class="card-header-custom">
             <span class="card-title-custom"><i class="fas fa-users"></i> Research Team</span>
             <span class="tag tag-green">${info.authors.length} members</span>
           </div>
-          <div class="card-body-custom">
-            <div class="author-grid">
-              ${info.authors.map((author, i) => `
-                <div class="author-card" style="text-align:left; padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                  <div>
-                    <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-                      <div class="author-avatar" style="margin:0; flex-shrink:0;">${Utils.getInitials(author.name)}</div>
-                      <div>
-                        <div class="author-name" style="font-size:0.88rem; font-weight:700; color:var(--text-primary); line-height:1.2;">${author.name}</div>
-                        <div class="author-role" style="color:var(--brand-primary); font-weight:600; font-size:0.72rem; margin-top:0.15rem;">${author.role}</div>
+          <div class="card-body-custom" style="padding:0;overflow-x:auto;">
+            <table class="data-table team-table">
+              <thead>
+                <tr>
+                  <th style="width:40px;text-align:center;">No</th>
+                  <th>Nama</th>
+                  <th>NIM</th>
+                  <th>Peran</th>
+                  <th>Tanggung Jawab</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${info.authors.map((author, i) => `
+                  <tr>
+                    <td style="text-align:center;font-weight:700;color:var(--brand-primary);">${i + 1}</td>
+                    <td>
+                      <div style="display:flex;align-items:center;gap:0.65rem;">
+                        <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--brand-primary),var(--brand-secondary));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.7rem;color:white;flex-shrink:0;">${Utils.getInitials(author.name)}</div>
+                        <span style="font-weight:600;color:var(--text-primary);font-size:0.85rem;">${author.name}</span>
                       </div>
-                    </div>
-                    <div style="font-size:0.75rem; color:var(--text-secondary); line-height:1.5; border-top:1px solid var(--border-color); padding-top:0.65rem;">
-                      <strong>Jobdesk Utama:</strong> ${author.jobdesk}
-                    </div>
-                  </div>
-                </div>
-              `).join('')}
-            </div>
+                    </td>
+                    <td><code style="font-size:0.8rem;color:var(--brand-accent);">${author.nim ?? '-'}</code></td>
+                    <td><span class="tag tag-green" style="white-space:nowrap;">${author.role}</span></td>
+                    <td style="font-size:0.8rem;color:var(--text-secondary);line-height:1.5;">${author.jobdesk}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
           </div>
         </div>
 
-        <!-- Downloads -->
+        <!-- Downloads (3-column responsive grid) -->
         <div class="card-glass" style="margin-bottom:1.5rem;">
           <div class="card-header-custom">
             <span class="card-title-custom"><i class="fas fa-download"></i> Downloads</span>
           </div>
           <div class="card-body-custom">
-            <div class="download-grid">
+            <div class="download-grid-3">
               <a class="download-card" href="data/geojson/Perubahan_Vegetasi_CapeTown_2024_2025.geojson"
                  download="Perubahan_Vegetasi_CapeTown_2024_2025.geojson" id="dl-geojson">
                 <div class="download-icon"><i class="fas fa-map"></i></div>
@@ -1071,7 +1070,7 @@ const Dashboard = (() => {
                 <div class="download-icon" style="background:rgba(139,92,246,0.1);color:#8b5cf6;"><i class="fas fa-database"></i></div>
                 <div class="download-info">
                   <h6>Change Statistics</h6>
-                  <p>statistics.json — vegetation area & change data</p>
+                  <p>statistics.json — vegetation area &amp; change data</p>
                 </div>
               </a>
               <a class="download-card" href="config/project_info.json"

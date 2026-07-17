@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>GeoAI | Vegetation Change Analysis — Cape Town 2024–2025</title>
+  <title>GeoAI | Classification and Change Detection of Vegetation in the City of Cape Town</title>
   <meta name="description"
     content="WebGIS dashboard for vegetation change analysis of Cape Town (2024–2025) using Sentinel-2 imagery and Random Forest classification. GeoAI Final Project." />
   <meta name="keywords"
     content="GeoAI, WebGIS, Cape Town, Vegetation Change, Sentinel-2, Random Forest, Leaflet, Remote Sensing" />
-  <meta property="og:title" content="GeoAI | Vegetation Change Analysis Cape Town" />
+  <meta property="og:title" content="GeoAI | Classification and Change Detection of Vegetation in the City of Cape Town" />
   <meta property="og:description"
-    content="Interactive WebGIS for analyzing wildfire-driven vegetation change using Sentinel-2 & Random Forest." />
+    content="Interactive WebGIS for Classification and Change Detection of Vegetation in the City of Cape Town using Sentinel-2 &amp; Random Forest." />
   <meta name="theme-color" content="#10b981" />
 
   <!-- ===== LOCAL LIBS: Fonts (CDN still OK as fallback, no SRI) ===== -->
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="lib/leaflet-minimap.min.css" />
 
   <!-- ===== Project Stylesheet ===== -->
-  <link rel="stylesheet" href="css/style.css?v=2.0.4" />
+  <link rel="stylesheet" href="css/style.css?v=2.1.0" />
 
   <style>
     /* Inline critical: Sentinel-V Stitch 3-column layout */
@@ -100,7 +100,7 @@
         <i class="fas fa-leaf"></i>
       </div>
       <div class="navbar-title">
-        <span class="title-main">Sentinel-V: Cape Town Fire Analysis</span>
+        <span class="title-main">Classification and Change Detection of Vegetation in the City of Cape Town</span>
         <span class="title-sub">GeoAI Final Project · 2024–2025</span>
       </div>
     </div>
@@ -254,13 +254,7 @@
                 <span style="font-size:0.85rem;color:var(--text-secondary);">Loading vegetation layer…</span>
               </div>
 
-              <!-- ===== SEARCH CONTROL ===== -->
-              <div class="map-search-control" id="map-search-control">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" id="map-search-input" placeholder="Search location…" autocomplete="off" />
-                <button id="map-search-btn" title="Search"><i class="fas fa-arrow-right"></i></button>
-                <div class="search-results-dropdown" id="search-results-dropdown"></div>
-              </div>
+              <!-- Search control removed per project requirements -->
 
               <!-- Floating FABs -->
               <div class="map-controls-panel">

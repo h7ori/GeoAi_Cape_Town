@@ -1,5 +1,5 @@
 {
-  "title": "Vegetation Change Analysis of Cape Town (2024–2025)",
+  "title": "Classification and Change Detection of Vegetation in the City of Cape Town",
   "subtitle": "GeoAI Final Project",
   "study_area": "Cape Town, South Africa",
   "satellite": "Sentinel-2",
@@ -7,35 +7,41 @@
   "trees": 100,
   "authors": [
     {
-      "name": "Anggota 1",
-      "role": "Lead Spatial Data Engineer",
-      "jobdesk": "Menentukan wilayah studi (kota/kabupaten) dan memastikan batas administrasi jelas. Melakukan query citra Sentinel-2 (2024 & 2025), menerapkan cloud masking, menciptakan median composite, serta melakukan clipping wilayah."
+      "name": "Moerice Joel Kalangit",
+      "nim": "1242002047",
+      "role": "Spatial Data Engineer",
+      "jobdesk": "Penetapan wilayah studi, akuisisi Sentinel-2, cloud masking SCL, median composite, clipping ke batas Kota Cape Town."
     },
     {
-      "name": "Anggota 2",
+      "name": "Zahrotul Mu'minati",
+      "nim": "1232002086",
       "role": "Ground Truth Specialist",
-      "jobdesk": "Membuat minimal 300 titik sampel observasi berlabel (seimbang antara target kelas 1 dan non-target kelas 0) untuk tahun 2024 dan 2025. Memastikan sebaran titik merata di seluruh kota (pusat, pinggiran, berbagai kondisi)."
+      "jobdesk": "Pembuatan 360 titik ground truth seimbang untuk tahun 2024 dan 2025 termasuk penambahan titik pada area transisi spektral."
     },
     {
-      "name": "Anggota 3",
+      "name": "Achmad Taufik Alfarizy",
+      "nim": "1232002087",
       "role": "Machine Learning Engineer",
-      "jobdesk": "Menulis kode GEE untuk melakukan split data otomatis (70% training, 30% testing) menggunakan seed tetap. Melatih model Random Forest dengan konfigurasi 100 trees dan melakukan klasifikasi citra dua tahun menggunakan model yang sama."
+      "jobdesk": "Penyusunan feature stack (7 fitur), split dataset 70:30 (seed 42), pelatihan Random Forest (100 trees), klasifikasi tahun 2024 dan 2025."
     },
     {
-      "name": "Anggota 4",
-      "role": "Model Evaluation & Change Analyst",
-      "jobdesk": "Menguji model dengan data testing, membuat confusion matrix, dan menghitung metrik APRF. Melakukan deteksi perubahan (change detection), menghitung luas pertambahan (gain), penyusutan (loss), perubahan bersih (net change), serta mengonversinya menjadi poligon vektor."
+      "name": "Hafizhah Dea Az Zahrah",
+      "nim": "1232002059",
+      "role": "Evaluation & Change Detection Analyst",
+      "jobdesk": "Confusion Matrix, Accuracy, Precision, Recall, F1-score, Feature Importance, Change Detection, Vectorisasi hasil, ekspor GeoJSON."
     },
     {
       "name": "Haryo Raafi Antarikso",
+      "nim": "1232002003",
       "role": "WebGIS Developer",
-      "jobdesk": "Membangun aplikasi WebGIS interaktif menggunakan platform pilihan (Leaflet.js/Streamlit/geemap). Mengintegrasikan file GeoJSON hasil klasifikasi dan perubahan, serta menyusun antarmuka aplikasi menjadi 4 tab wajib (Peta Hasil, Data & Proses, Evaluasi Model, Insight Hasil)."
+      "jobdesk": "Pengembangan WebGIS interaktif, integrasi Leaflet, dashboard, visualisasi layer, UI/UX."
     },
     {
-      "name": "Anggota 6",
+      "name": "Ahmad Rafly",
+      "nim": "1232002058",
       "role": "Repository Manager & Technical Writer",
-      "jobdesk": "Mengelola public repository GitHub dengan struktur folder yang rapi (gee/, webgis/, data/, results/, report/). Menulis dokumentasi lengkap pada README.md, menyusun laporan akhir ringkas (5-8 halaman), dan menyiapkan materi presentasi/demo tim."
+      "jobdesk": "Pengelolaan GitHub Repository, README, dokumentasi teknis, penyusunan laporan, koordinasi presentasi."
     }
   ],
-  "description": "This project analyzes vegetation changes in Cape Town between 2024 and 2025 using Sentinel-2 imagery and a Random Forest classifier. The resulting WebGIS visualizes classification outputs, vegetation change polygons, model evaluation metrics, and summary insights."
+  "description": "This project analyzes and classifies vegetation cover in the City of Cape Town using Sentinel-2 imagery (2024–2025) and a Random Forest classifier, detecting spatial change patterns through a WebGIS dashboard."
 }
