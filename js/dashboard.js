@@ -25,8 +25,8 @@ const Dashboard = (() => {
           GeoAI Final Project
         </div>
         <h1 class="hero-title">
-          <span class="gradient-text">Classification and Change Detection</span><br>
-          of Vegetation in the City of Cape Town
+          <span class="gradient-text">Vegetation Change Analysis</span><br>
+          <span style="color:var(--text-secondary);font-size:0.7em;font-weight:500;">Cape Town, South Africa</span>
           <span style="color:var(--text-muted);font-size:0.55em;"> (2024–2025)</span>
         </h1>
         <p class="hero-description">
