@@ -361,6 +361,27 @@ const Dashboard = (() => {
                   <td><span class="tag tag-blue">Detected</span></td>
                 </tr>
                 <tr>
+                  <td><code style="font-size:0.78rem;color:var(--brand-primary);">Boundary_CapeTown.geojson</code></td>
+                  <td><span class="tag tag-green">GeoJSON</span></td>
+                  <td>All</td>
+                  <td>Cape Town municipal administrative boundary polygon</td>
+                  <td><span class="tag tag-green">Loaded ✓</span></td>
+                </tr>
+                <tr>
+                  <td><code style="font-size:0.78rem;color:var(--brand-primary);">Vegetasi_CapeTown_2024.geojson</code></td>
+                  <td><span class="tag tag-green">GeoJSON</span></td>
+                  <td>2024</td>
+                  <td>Vegetation extent polygons for baseline year 2024</td>
+                  <td><span class="tag tag-green">Loaded ✓</span></td>
+                </tr>
+                <tr>
+                  <td><code style="font-size:0.78rem;color:var(--brand-primary);">Vegetasi_CapeTown_2025.geojson</code></td>
+                  <td><span class="tag tag-green">GeoJSON</span></td>
+                  <td>2025</td>
+                  <td>Vegetation extent polygons for comparison year 2025</td>
+                  <td><span class="tag tag-green">Loaded ✓</span></td>
+                </tr>
+                <tr>
                   <td><code style="font-size:0.78rem;color:var(--brand-primary);">Perubahan_Vegetasi_CapeTown_2024_2025.geojson</code></td>
                   <td><span class="tag tag-green">GeoJSON</span></td>
                   <td>2024–2025</td>
