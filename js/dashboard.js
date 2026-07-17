@@ -110,16 +110,16 @@ const Dashboard = (() => {
           <div class="card-body-custom">
             <div class="tech-grid">
               ${[
-                { icon: 'fa-satellite',    label: 'Sentinel-2',      color: '#3b82f6' },
-                { icon: 'fa-robot',        label: 'Random Forest',   color: '#10b981' },
-                { icon: 'fa-python',       label: 'Python / scikit-learn', color: '#f59e0b' },
-                { icon: 'fa-map',          label: 'Leaflet.js',      color: '#10b981' },
-                { icon: 'fa-chart-bar',    label: 'Chart.js',        color: '#8b5cf6' },
-                { icon: 'fa-file-code',    label: 'GeoJSON',         color: '#14b8a6' },
-                { icon: 'fa-image',        label: 'GeoTIFF',         color: '#f97316' },
-                { icon: 'fa-code',         label: 'HTML5 / CSS3',    color: '#ef4444' },
-                { icon: 'fa-js',           label: 'JavaScript ES6+', color: '#eab308' },
-                { icon: 'fa-bootstrap',    label: 'Bootstrap 5',     color: '#7c3aed' },
+                { icon: 'fa-satellite',    label: 'Sentinel-2',           color: '#3b82f6' },
+                { icon: 'fa-robot',        label: 'Random Forest',        color: '#10b981' },
+                { icon: 'fa-globe',        label: 'Google Earth Engine',  color: '#f59e0b' },
+                { icon: 'fa-map',          label: 'Leaflet.js',           color: '#10b981' },
+                { icon: 'fa-chart-bar',    label: 'Chart.js',             color: '#8b5cf6' },
+                { icon: 'fa-file-code',    label: 'GeoJSON',              color: '#14b8a6' },
+                { icon: 'fa-image',        label: 'GeoTIFF',              color: '#f97316' },
+                { icon: 'fa-code',         label: 'HTML5 / CSS3',         color: '#ef4444' },
+                { icon: 'fa-js',           label: 'JavaScript ES6+',      color: '#eab308' },
+                { icon: 'fa-bootstrap',    label: 'Bootstrap 5',          color: '#7c3aed' },
               ].map(t => `
                 <span class="tech-badge">
                   <i class="fas ${t.icon}" style="color:${t.color};"></i>
